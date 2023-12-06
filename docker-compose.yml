@@ -5,12 +5,10 @@ services:
     container_name: tautulli
     restart: unless-stopped
     volumes:
-      - config:/config
+      - /tank/docker/tautulli:/config
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
     ports:
       - 8181:8181
-volumes:
-  config:
