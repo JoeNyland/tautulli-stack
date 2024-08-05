@@ -3,8 +3,11 @@ services:
     image: ghcr.io/tautulli/tautulli
     container_name: tautulli
     restart: unless-stopped
-    ports:
-      - 8181:8181
+    network_mode: host
+    labels:
+      traefik.enable: true
+      traefik.http.services.tautulli.loadbalancer.server.port: 8181
+      traefik.http.routers.tautulli.rule: Host(`tautulli`)
     environment:
       - PUID=1000
       - PGID=1000
