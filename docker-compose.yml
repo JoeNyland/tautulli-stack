@@ -13,4 +13,4 @@ services:
       - PGID=994
       - TZ=Europe/London
     volumes:
-      - /tank/containers/tautulli:/config
+      - /containers/tautulli:/config
