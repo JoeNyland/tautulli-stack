@@ -9,8 +9,8 @@ services:
       traefik.http.services.tautulli.loadbalancer.server.port: 8181
       traefik.http.routers.tautulli.rule: Host(`tautulli`)
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=994
+      - PGID=994
       - TZ=Europe/London
     volumes:
       - /tank/containers/tautulli:/config
