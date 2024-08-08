@@ -9,7 +9,7 @@ services:
       traefik.http.services.tautulli.loadbalancer.server.port: 8181
       traefik.http.routers.tautulli.rule: Host(`tautulli`)
     environment:
-      - PUID=994
+      - PUID=991
       - PGID=994
       - TZ=Europe/London
     volumes:
