@@ -8,6 +8,10 @@ services:
       traefik.enable: true
       traefik.http.services.tautulli.loadbalancer.server.port: 8181
       traefik.http.routers.tautulli.rule: Host(`tautulli`)
+      traefik.http.routers.tautulli.middlewares: tautulli-ipallowlist
+      traefik.http.middlewares.tautulli-ipallowlist.ipallowlist.sourcerange: >
+        2a00:23c8:bda0:b310::/64,
+        10.10.0.0/16
     environment:
       - PUID=991
       - PGID=994
