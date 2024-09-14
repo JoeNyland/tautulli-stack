@@ -10,8 +10,8 @@ services:
       traefik.http.routers.tautulli.rule: Host(`tautulli`)
       traefik.http.routers.tautulli.middlewares: trusted-ipallowlist
     environment:
-      - PUID=991
-      - PGID=994
-      - TZ=Europe/London
+      PUID: 991
+      PGID: 994
+      TZ: Europe/London
     volumes:
       - /containers/tautulli:/config
